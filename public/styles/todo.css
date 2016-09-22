@@ -1,0 +1,31 @@
+.todo-container {
+  border: 10px solid green;
+  width: 650px;
+  min-width: 650px;
+  min-height: 100px;
+  background-color: lime;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.todo-container .title-row {
+  text-align: center;
+}
+
+.input-border {
+  border: 2px solid black;
+}
+
+h1 {
+  font-family: Impact;
+}
+
+.todo {
+  font-size: 24px;
+  padding: 12px 0px 0px 35px;
+  height: 55px;
+}
+
+.close {
+  padding-right: 35px;
+  font-size: 32px;
+}
