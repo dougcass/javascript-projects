@@ -1,9 +1,12 @@
+@import 'https://fonts.googleapis.com/css?family=Orbitron';
+
 .todo-container {
+  color: lime;
   border: 10px solid green;
   width: 650px;
   min-width: 650px;
   min-height: 100px;
-  background-color: lime;
+  background-color: black;
   margin: 0 auto;
   margin-top: 10px;
 }
@@ -16,10 +19,11 @@
 }
 
 h1 {
-  font-family: Impact;
+  font-family:'Orbitron';
 }
 
 .todo {
+  font-family: 'Orbitron';
   font-size: 24px;
   padding: 12px 0px 0px 35px;
   height: 55px;
