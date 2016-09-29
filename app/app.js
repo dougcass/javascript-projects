@@ -10,6 +10,7 @@ require('bootstrap');
 import './stylesheets/base.scss';
 import _ from 'underscore';
 import todoController from './pages/todo';
+import svgController from './pages/svg_example';
 //import multimediaController from '.pages/multimedia';
 // on document load
 $(function(){
@@ -29,6 +30,8 @@ if (window.location.pathname === '/pages/todo.html') {
   todoController.init();
 } else if (window.location.pathname === '/pages/multimedia.html') {
   console.log('multimedia page started');
+} else if (window.location.pathname === '/pages/svg_example.html') {
+  svgController.init();
 }
 // todo.init(); ??
 });
