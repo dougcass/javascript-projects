@@ -11,6 +11,7 @@ import './stylesheets/base.scss';
 import _ from 'underscore';
 import todoController from './pages/todo';
 import svgController from './pages/svg_example';
+import threeController from './pages/three';
 //import multimediaController from '.pages/multimedia';
 // on document load
 $(function(){
@@ -33,5 +34,10 @@ if (window.location.pathname === '/pages/todo.html') {
 } else if (window.location.pathname === '/pages/svg_example.html') {
   svgController.init();
 }
+else if (window.location.pathname === '/pages/three.html') {
+  threeController.init();
+}
+
+
 // todo.init(); ??
 });
