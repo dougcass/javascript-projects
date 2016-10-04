@@ -1,5 +1,16 @@
 
 
+
+# Welcome
+
+Thank you for visitng my JavasScript repository.
+Please visit my links:
+[Codepen](http://codepen.io/washburn119/)
+
+
+- links to linkedin,codepen,etc..
+- intro paragraph
+- link to Heroku app
 # To Use
 
 - Create a repo on Github

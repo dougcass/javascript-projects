@@ -37,7 +37,8 @@ var Bird = function () {
   }
 
 };
-
-Bird.prototype = Object.create( THREE.Geometry.prototype );
+if (THREE) {
+  Bird.prototype = Object.create( THREE.Geometry.prototype );
+}
 Bird.prototype.constructor = Bird;
 module.exports = Bird;
