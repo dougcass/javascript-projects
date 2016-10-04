@@ -12,6 +12,7 @@ import _ from 'underscore';
 import todoController from './pages/todo';
 import svgController from './pages/svg_example';
 import threeController from './pages/three';
+import resumeController from './pages/resume';
 //import multimediaController from '.pages/multimedia';
 // on document load
 $(function(){
@@ -37,6 +38,10 @@ if (window.location.pathname === '/pages/todo.html') {
 else if (window.location.pathname === '/pages/three.html') {
   threeController.init();
 }
+else if (window.location.pathname === '/pages/resume.html') {
+  resumeController.init();
+}
+
 
 
 // todo.init(); ??
