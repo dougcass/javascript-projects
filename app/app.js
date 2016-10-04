@@ -16,7 +16,7 @@ import resumeController from './pages/resume';
 //import multimediaController from '.pages/multimedia';
 // on document load
 $(function(){
-
+  //Kick off the app
   console.log('%c App Started', 'color:green');
 
   // set default template settings
@@ -26,21 +26,38 @@ $(function(){
     escape:      /{{=([\s\S]+?)}}/g
   };
 
-//Kick off the app
-// which page are we on???
-if (window.location.pathname === '/pages/todo.html') {
+
+// My First Router; Which page are we on???
+switch(window.location.pathname){
+case '/pages/todo.html':
   todoController.init();
-} else if (window.location.pathname === '/pages/multimedia.html') {
+  break;
+  case '/pages/multimedia.html':
   console.log('multimedia page started');
-} else if (window.location.pathname === '/pages/svg_example.html') {
+  break;
+  case '/pages/svg_example.html':
   svgController.init();
-}
-else if (window.location.pathname === '/pages/three.html') {
+  break;
+  case '/pages/three.html':
   threeController.init();
-}
-else if (window.location.pathname === '/pages/resume.html') {
+  break;
+  case '/pages/resume.html':
   resumeController.init();
+  break;
+
 }
+
+
+// if (window.location.pathname === '/pages/todo.html') {
+//   todoController.init();
+// } else if (window.location.pathname === '/pages/multimedia.html') {
+//   console.log('multimedia page started');
+
+
+console.log('====================================');
+console.log('Yo! Hire Me!! casserleighd@gmail.com');
+console.log('====================================');
+
 
 
 
