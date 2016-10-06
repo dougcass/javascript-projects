@@ -77,19 +77,26 @@ var controller = {
     model.get()[index].completed = ! model.get()[index].completed;
     // view updates automatically, Yay HTML!
     model.save();
+    controller.renderTemplates();
+
   },
   // event handler for the add button
   addTodoHandler: function(){
+    // gets the value of the input box and sets it equal to a variable
     var newTitle = $('.add-input').val();
+    // if input value is an empty string exit
     if (newTitle === '') return;
+    // retrieve the database array and add new title and set completed to false
     model.get().push({
       title: newTitle,
       completed: false
     });
+    // set input box to empty
     $('.add-input').val('');
+    // refresh the template view with newly added todo ie updates the display
     controller.renderTemplates();
   }
 };
-
+//specifies what will be returned when this file is imported
 module.exports = controller;
 

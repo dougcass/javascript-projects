@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Orbitron';
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 
 .todo-container {
   color: lime;
@@ -6,13 +6,14 @@
   width: 650px;
   min-width: 650px;
   min-height: 100px;
-  background-color: black;
+  background-color: white;
   margin: 0 auto;
   margin-top: 10px;
-}
-.todo-container .title-row {
+  .title-row {
   text-align: center;
+ }
 }
+
 
 .input-border {
   border: 2px solid black;
@@ -22,11 +23,19 @@
   font-family:'Orbitron';
 }
 
-.todo {
+.todo-container .todo {
+  background-color: lightgrey;
   font-family: 'Orbitron';
   font-size: 24px;
   padding: 12px 0px 0px 35px;
   height: 55px;
+  &.completed {
+    background-color: inherit;
+  }
+  &.completed .todo-title {
+    color:lightgrey;
+    text-decoration: line-through;
+  }
 }
 
 .close {
