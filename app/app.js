@@ -9,10 +9,12 @@ require('bootstrap');
 // import our styles
 import './stylesheets/base.scss';
 import _ from 'underscore';
+import navbar from './components/navbar';
 import todoController from './pages/todo';
 import svgController from './pages/svg_example';
 import threeController from './pages/three';
 import resumeController from './pages/resume';
+
 //import multimediaController from '.pages/multimedia';
 // on document load
 $(function(){
@@ -25,6 +27,9 @@ $(function(){
     interpolate: /{{-([\s\S]+?)}}/g,
     escape:      /{{=([\s\S]+?)}}/g
   };
+
+  // launch navbar
+  navbar.init();
 
 
 // My First Router; Which page are we on???
