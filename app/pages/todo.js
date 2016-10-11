@@ -57,6 +57,7 @@ var controller = {
   //add the event handlers
   createEventHandlers: function(){
     controller.addButton.on('click', controller.addTodoHandler);
+    $('.add-input').on('keypress', controller.addTodoKeyPress);
     $('input[type="checkbox"]').on('change', controller.checkedHandler);
     $('.close').on('click', controller.removeHandler);
     // edit button handler
@@ -76,6 +77,7 @@ var controller = {
     // make change when save is clicked
     $item.find('.save').on('click', controller.updateTitle);
     $item.find('.todo-title-edit input').on('keypress', controller.updateTitleKeyPress);
+    
 
   },
   // handler to update title on hitting enter key
@@ -120,6 +122,13 @@ var controller = {
     controller.renderTemplates();
 
   },
+
+  addTodoKeyPress: function(event){
+    if (event.which === 13){
+      controller.addTodoHandler(event);
+    }
+  },
+
   // event handler for the add button
   addTodoHandler: function(){
     // gets the value of the input box and sets it equal to a variable
