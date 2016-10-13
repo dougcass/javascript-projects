@@ -14,7 +14,7 @@ import todoController from './pages/todo';
 import svgController from './pages/svg_example';
 import threeController from './pages/three';
 import resumeController from './pages/resume';
-
+import bbTodoController from './pages/bb_todo';
 //import multimediaController from '.pages/multimedia';
 // on document load
 $(function(){
@@ -37,21 +37,25 @@ switch(window.location.pathname){
 case '/pages/todo.html':
   todoController.init();
   break;
-  case '/pages/multimedia.html':
+case '/pages/bb_todo.html':
+  new bbTodoController();
+  break;
+case '/pages/multimedia.html':
   console.log('multimedia page started');
   break;
-  case '/pages/svg_example.html':
+case '/pages/svg_example.html':
   svgController.init();
   break;
-  case '/pages/three.html':
+case '/pages/three.html':
   threeController.init();
   break;
-  case '/pages/resume.html':
+case '/pages/resume.html':
   resumeController.init();
   break;
 
 }
 
+// original router syntax
 
 // if (window.location.pathname === '/pages/todo.html') {
 //   todoController.init();
