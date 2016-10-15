@@ -19,9 +19,10 @@ var ControllerView = Backbone.View.extend({
     //alert('you have ' + this.model.get('todos').length + ' todos!');
     var todos = this.model.get('todos');
     // render each item
+    var that = this;
     var renderedTodos = todos.map(function(item, index){
-      item.id = index;
-      var view = new bbTodoItemView(item);
+      item.id = index + 1;
+      var view = new bbTodoItemView(item, that); 
       return view.$el;
     });
     // put all the todo items in to the dom
@@ -36,6 +37,24 @@ var ControllerView = Backbone.View.extend({
   addKeyPress: function(event) {
     if (event.which === 13) {
       this.addTodo();
+    }
+  },
+  removeTodo: function(id){
+    if (id >= 0) {
+      this.model.removeTodo(id);
+      this.render();
+    }
+  },
+  editTodo: function(id, newTitle){
+    if (id >= 0) {
+      this.model.editTodo(id, newTitle);
+      this.render();
+    }
+  },
+  changeComplete: function(id){
+     if (id >= 0) {
+      this.model.completeTodo(id);
+      this.render();
     }
   }
 });
