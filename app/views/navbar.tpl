@@ -20,4 +20,7 @@
   <li>
     <a href="/pages/resume.html">Resume</a>
   </li>
+  <li>
+    <a href="/pages/photo_search.html">Photo Search</a>
+  </li>
 </ul>

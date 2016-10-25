@@ -5,10 +5,12 @@ import bbTodoModel from '../models/bb_todoModel';
 import bbTodoItemView from '../views/bb_todoItemView';
 
 var ControllerView = Backbone.View.extend({
+  // defines main view element el is the raw document node (todo container), creates jquery object for reference ($el)
   el: '.todo-container',
   events: {
     'click .btn-add': 'addTodo',
     'keypress .add-input': 'addKeyPress'
+    
   },
   model: new bbTodoModel(),
   initialize: function(){
@@ -16,7 +18,6 @@ var ControllerView = Backbone.View.extend({
     this.render();
   },
   render: function(){
-    //alert('you have ' + this.model.get('todos').length + ' todos!');
     var todos = this.model.get('todos');
     // render each item
     var that = this;

@@ -2,6 +2,7 @@ import Backbone from 'backbone';
 import lscache from 'lscache';
 
 var model = Backbone.Model.extend({
+  // set model default to an empty array
   defaults: {
     todos: []
   },

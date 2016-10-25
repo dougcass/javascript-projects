@@ -10,7 +10,9 @@ var todoItemView = Backbone.View.extend({
     'click .close': 'removeHandler',
     'click .edit': 'editHandler',
     'click .save': 'saveHandler',
-    'change input[type="checkbox"]': 'checkboxHandler'
+    'change input[type="checkbox"]': 'checkboxHandler',
+    'keypress .todo-title-edit input': 'editKeyPressHandler',
+
   },
   initialize: function(item, controller){
     //compile the template
@@ -38,6 +40,12 @@ var todoItemView = Backbone.View.extend({
   },
   checkboxHandler: function(){
     this.controller.changeComplete(this.id);
+  },
+  editKeyPressHandler: function(event){
+    var newTitle = this.$el.find('.todo-title-edit input').val();
+    if (event.which === 13) {
+      this.controller.editTodo(this.id, newTitle);
+    }
   }
 });
 

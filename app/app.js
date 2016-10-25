@@ -8,13 +8,13 @@ require('bootstrap');
 
 // import our styles
 import './stylesheets/base.scss';
-import _ from 'underscore';
 import navbar from './components/navbar';
 import todoController from './pages/todo';
 import svgController from './pages/svg_example';
 import threeController from './pages/three';
 import resumeController from './pages/resume';
 import bbTodoController from './pages/bb_todo';
+import photoSearchController from './pages/photo_search';
 //import multimediaController from '.pages/multimedia';
 // on document load
 $(function(){
@@ -22,11 +22,7 @@ $(function(){
   console.log('%c App Started', 'color:green');
 
   // set default template settings
-  _.templateSettings = {
-    evaluate:    /{{([\s\S]+?)}}/g,
-    interpolate: /{{-([\s\S]+?)}}/g,
-    escape:      /{{=([\s\S]+?)}}/g
-  };
+ 
 
   // launch navbar
   navbar.init();
@@ -52,6 +48,10 @@ case '/pages/three.html':
 case '/pages/resume.html':
   resumeController.init();
   break;
+case '/pages/photo_search.html':
+  new photoSearchController();
+  break;
+
 
 }
 
