@@ -7,8 +7,11 @@ var Controller = Backbone.View.extend({
   // defines main view element el is the raw document node (todo container), creates jquery object for reference ($el)
   model: new bbTodoModel(),
   initialize: function(){
-    this.model.fetch();
-    this.render();
+    var that = this;
+    // fetch will call render when done
+    this.model.fetch(function() {
+      that.render();
+    });
   },
   render: function(){
     var todos = this.model.get('todos');
@@ -18,7 +21,6 @@ var Controller = Backbone.View.extend({
     this.view = new bbTodoView(todos, this);
   },
   addTodo: function(newTitle){
-    debugger;
       this.model.addTodo(newTitle);
       this.render();
   },
