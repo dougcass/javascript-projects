@@ -48,7 +48,7 @@ module.exports = {
       // get the todos form a file
       fs.readFile('./server/todos.json', 'utf8', function(err, file){
         // send the todos as the response
-        if(err === null) {
+        if(err) {
           res.status(200).send('[]').end();
         } else {
           res.status(200).send(file).end();

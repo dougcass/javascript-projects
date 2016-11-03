@@ -14,6 +14,7 @@ import svgController from './pages/svg_example';
 import threeController from './pages/three';
 import resumeController from './pages/resume';
 import bbTodoController from './pages/bb_todo';
+import rTodoController from './pages/r_todo';
 import photoSearchController from './pages/photo_search';
 //import multimediaController from '.pages/multimedia';
 // on document load
@@ -35,6 +36,9 @@ case '/pages/todo.html':
   break;
 case '/pages/bb_todo.html':
   new bbTodoController();
+  break;
+case '/pages/r_todo.html':
+  new rTodoController();
   break;
 case '/pages/multimedia.html':
   console.log('multimedia page started');
