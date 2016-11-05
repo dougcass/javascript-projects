@@ -15,7 +15,7 @@ var model = Backbone.Model.extend({
       url: '/api/todos',
       success: function(todos){
         that.set('todos', todos);
-        if (typeof callback === 'function'){
+        if (typeof callback === 'function') {
           callback();
         }
       }

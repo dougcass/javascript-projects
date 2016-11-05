@@ -42,15 +42,6 @@ var TodoView = Backbone.View.extend({
   addKeyPress: function(event) {
     var newTitle = this.$el.find('.add-input').val();
     this.controller.addKeyPress(event, newTitle);
-  },
-  removeTodo: function(id){
-    this.controller.removeTodo(id);
-  },
-  editTodo: function(id, newTitle){
-      this.controller.editTodo(id, newTitle);
-  },
-  changeComplete: function(id){
-      this.controller.changeComplete(id);
   }
 });
 
